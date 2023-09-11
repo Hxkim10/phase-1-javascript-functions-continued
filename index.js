@@ -1,1 +1,22 @@
 // code your solution here
+function saturdayFun(activity = "roller-skate") {
+  return `This Saturday, I want to ${activity}!`;
+}
+
+function mondayWork(activity = "go to the office") {
+  return `This Monday, I will ${activity}.`;
+}
+
+function wrapAdjective() {}
+
+function wrapAdjective(flair = "*") {
+  return function (adjective = "special") {
+    return `You are ${flair}${adjective}${flair}!`;
+  };
+}
+
+const encouragingPromptFunction = wrapAdjective("!!!");
+console.log(encouragingPromptFunction("a dedicated programmer")); // Output: "You are !!!a dedicated programmer!!!"
+
+const customWrapFunction = wrapAdjective("%");
+console.log(customWrapFunction("an amazing artist")); // Output: "You are %an amazing artist%!"
